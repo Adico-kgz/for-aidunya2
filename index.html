@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#090711" />
+    <title>Для моей Айдуни ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="stars" aria-hidden="true"></div>
+    <div class="glow" aria-hidden="true"></div>
+    <audio
+      id="backgroundMusic"
+      src="assets/music/romantic-melody.mp3"
+      loop
+      preload="auto"
+    ></audio
+    ><button
+      id="musicToggle"
+      class="music-toggle"
+      aria-label="Включить или выключить музыку"
+      title="Музыка"
+    >
+      ♪
+    </button>
+    <main id="app">
+      <section id="intro" class="scene active" aria-label="Вступление">
+        <div class="matrix" id="matrix" aria-hidden="true"></div>
+        <div id="count" class="count">3</div>
+        <div id="introWords" class="intro-words" aria-live="polite"></div>
+        <button id="introSkip" class="subtle skip">
+          Пропустить вступление <span>›</span>
+        </button>
+      </section>
+      <section id="music" class="scene" aria-label="Музыка">
+        <div class="music-orb">♫</div>
+        <div class="eyebrow">Прежде чем продолжить</div>
+        <h1 class="music-title">Эта мелодия<br /><em>для тебя ♡</em></h1>
+        <p class="music-description">
+          Нажми, чтобы включить музыку и открыть открытку
+        </p>
+        <button id="startMusic" class="music-start">
+          ♫ &nbsp; Включить музыку
+        </button>
+      </section>
+      <section id="invite" class="scene" aria-label="Открытка">
+        <div class="eyebrow">Для тебя, от всего сердца</div>
+        <h1>Моей самой<br /><em>дорогой</em> ♡</h1>
+        <button class="envelope" id="openCard" aria-label="Открыть открытку">
+          <span class="envelope-back"></span
+          ><span class="envelope-paper"
+            ><span>Одно маленькое письмо<br />для тебя ♡</span></span
+          ><span class="envelope-front"></span
+          ><span class="envelope-heart">♥</span>
+        </button>
+        <div class="hint">Нажми на открытку, чтобы открыть <span>↑</span></div>
+      </section>
+      <section id="gallery" class="scene" aria-label="Наши моменты">
+        <header class="gallery-header">
+          <span>Наши моменты ♡</span><span id="pageNumber">01 / 03</span>
+        </header>
+        <div class="gallery-card" id="galleryCard">
+          <div class="note">
+            <span class="tiny-heart">♥</span>
+            <p id="pageText" aria-live="polite"></p>
+          </div>
+          <div class="photos">
+            <figure class="photo">
+              <img id="photoA" alt="Наше фото" hidden />
+              <div class="placeholder" id="placeholderA">
+                <span>♡</span><small>Ваше фото 1</small>
+              </div>
+            </figure>
+            <figure class="photo">
+              <img id="photoB" alt="Наше фото" hidden />
+              <div class="placeholder" id="placeholderB">
+                <span>♡</span><small>Ваше фото 2</small>
+              </div>
+            </figure>
+          </div>
+        </div>
+        <div class="gallery-bottom">
+          <button class="round" id="prevPage" aria-label="Назад">‹</button>
+          <div id="dots" class="dots" aria-label="Страницы"></div>
+          <button class="round next" id="nextPage" aria-label="Далее">›</button>
+        </div>
+        <div class="swipe-hint">
+          Листай влево, чтобы продолжить <span>←</span>
+        </div>
+      </section>
+      <section id="ending" class="scene" aria-label="Письмо">
+        <div class="ending-caption">
+          Есть кое-что, что я хочу тебе сказать...
+        </div>
+        <button
+          id="letterButton"
+          class="letter-closed"
+          aria-label="Открыть письмо"
+        >
+          <div class="wax">♡</div>
+          <span>Письмо для тебя</span><small>Нажми, чтобы прочитать</small>
+        </button>
+        <article class="letter" id="letter" hidden>
+          <div class="letter-ornament">✧ ♡ ✧</div>
+          <h2>Моя любимая Айдуня,</h2>
+          <div id="letterText" class="letter-body" aria-live="polite"></div>
+          <div class="signature" id="signature" hidden>
+            С любовью, от всего сердца ♡
+          </div>
+          <button class="replay" id="replay" hidden>
+            Посмотреть ещё раз ↺
+          </button>
+        </article>
+      </section>
+    </main>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
